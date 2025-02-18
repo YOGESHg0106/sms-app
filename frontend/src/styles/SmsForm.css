@@ -1,0 +1,64 @@
+/* Basic styling */
+.sms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .sms-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 768px) {
+    .sms-container {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    .sms-container h2 {
+      font-size: 20px;
+    }
+  
+    input, textarea, button {
+      font-size: 14px;
+    }
+  }
+  
+  /* For very small screens (e.g., mobile phones) */
+  @media (max-width: 480px) {
+    .sms-container h2 {
+      font-size: 18px;
+    }
+  
+    input, textarea, button {
+      font-size: 12px;
+    }
+  }
+  
