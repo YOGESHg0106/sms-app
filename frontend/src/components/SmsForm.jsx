@@ -12,10 +12,13 @@ const SmsForm = () => {
     const formattedPhone = phone.startsWith("+91") ? phone : `+91${phone}`;
 
     try {
-      const response = await axios.post("http://localhost:5000/send-sms", {
-        phone: formattedPhone,
-        message,
-      });
+      const response = await axios.post(
+        "https://sms-app-gca8.onrender.com/send-sms",
+        {
+          phone: formattedPhone,
+          message,
+        }
+      );
       setStatus(response.data.message);
     } catch (error) {
       setStatus("Error sending message.");

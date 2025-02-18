@@ -6,7 +6,11 @@ const twilio = require("twilio");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://sms-app-rho-two.vercel.app/", // Replace with your actual frontend URL
+  })
+);
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 5000;
